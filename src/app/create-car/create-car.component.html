@@ -1,0 +1,40 @@
+<div class="create-body">
+    <div class="container">
+        <div class="title">
+            <b>Create Car</b>
+        </div>
+        <div class="params">
+            <form class="create-form">
+                <div class="select-brand">
+                    <label>Select brand</label>
+                    <select>
+                        <option *ngFor="let brand of ['Audi', 'BMW', 'Mercedes']" value="brand">
+                            {{brand}}
+                        </option>
+                    </select>
+                </div>
+                <div class="enter-model">
+                    <label>Enter model name</label>
+                    <input type="text">
+                </div>
+                <div class="select-color">
+                    <label>Select color</label>
+                    <select>
+                        <option *ngFor="let color of ['Red', 'Black', 'White']" value="color">
+                            {{color}}
+                        </option>
+                    </select>
+                </div>
+                <div class="enter-engine-capacity">
+                    <label>Enter engine capacity</label>
+                    <input type="number">
+                </div>
+                <div class="enter-description">
+                    <label>Write description</label>
+                    <input type="text">
+                </div>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
