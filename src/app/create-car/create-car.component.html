@@ -1,39 +1,48 @@
 <div class="create-body">
     <div class="container">
         <div class="title">
-            <b>Create Car</b>
+            <b>{{isUpdating ? 'Update' : 'Create'}} Car</b>
         </div>
         <div class="params">
-            <form class="create-form">
-                <div class="select-brand">
+            <form [formGroup]="createCarForm" (submit)="isUpdating ? updateCar() : createCar()" class="create-form">
+                <div class="select-brand m">
                     <label>Select brand</label>
-                    <select>
-                        <option *ngFor="let brand of ['Audi', 'BMW', 'Mercedes']" value="brand">
-                            {{brand}}
+                    <select formControlName="brand">
+                        <option *ngFor="let brand of allBrands" [ngValue]="brand">
+                            {{brand.name}}
                         </option>
                     </select>
                 </div>
-                <div class="enter-model">
+                <div class="enter-model m">
                     <label>Enter model name</label>
-                    <input type="text">
+                    <input id="model" formControlName="model" type="text">
                 </div>
-                <div class="select-color">
+                <div class="select-color m">
                     <label>Select color</label>
-                    <select>
-                        <option *ngFor="let color of ['Red', 'Black', 'White']" value="color">
+                    <select formControlName="color">
+                        <option *ngFor="let color of allColors" [ngValue]="color">
                             {{color}}
                         </option>
                     </select>
                 </div>
-                <div class="enter-engine-capacity">
+                <div class="enter-engine-capacity m">
                     <label>Enter engine capacity</label>
-                    <input type="number">
+                    <input id="engineCapacity" formControlName="engineCapacity" type="number">
                 </div>
-                <div class="enter-description">
+                <div class="enter-current-price m">
+                    <label>Enter price</label>
+                    <input id="currentPrice" formControlName="currentPrice" type="number">
+                </div>
+                <div class="enter-description m">
                     <label>Write description</label>
-                    <input type="text">
+                    <input id="description" formControlName="description" type="text">
                 </div>
-                <button type="submit">Create</button>
+                <div class="buttons">
+                    <button class="button-17 create-button" type="submit">{{isUpdating ? 'Update' : 'Create'}}</button>
+                    <button *ngIf="isUpdating" class="button-17" type="button"
+                        [routerLink]="['/' + updatingCarId]">Back</button>
+                    <button *ngIf="!isUpdating" class="button-17" type="button" [routerLink]="['']">Back</button>
+                </div>
             </form>
         </div>
     </div>

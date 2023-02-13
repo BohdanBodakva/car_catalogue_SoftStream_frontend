@@ -1,0 +1,64 @@
+<div class="filters-div">
+    <div class="container">
+        <div class="title">
+            <h3>Filters</h3>
+        </div>
+        <div class="container-2">
+            <form [formGroup]="filterForm" class="filter-form" (submit)="doFilter()">
+                <div *ngIf="!this.renderedCarsService.areRenderingCarsByBrand" class="brand m">
+                    <label>Brand</label>
+                    <select formControlName="brand">
+                        <option value="">
+                            Select brand
+                        </option>
+                        <option *ngFor="let brand of allBrands" value={{brand.name}}>
+                            {{brand.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="color m">
+                    <label>Color</label>
+                    <select formControlName="color">
+                        <option value="">
+                            Select color
+                        </option>
+                        <option *ngFor="let color of allColors" value={{color}}>
+                            {{color}}
+                        </option>
+                    </select>
+                </div>
+                <div class="engineCapacity m">
+                    <label>Engine capacity >=</label>
+                    <input formControlName="engineCapacity" type="number">
+                </div>
+                <div class="price-date m">
+                    <div class="price">
+                        <label>Price range</label>
+                        <select formControlName="price">
+                            <option value="">
+                                Select price range
+                            </option>
+                            <option *ngFor="let price of priceRange" value={{price}}>
+                                up to {{price}} $
+                            </option>
+                        </select>
+                    </div>
+                    <div class="date">
+                        <label>On date</label>
+                        <input formControlName="date" [value]="date" [matDatepicker]="picker">
+                        <mat-datepicker-toggle class="toggle" [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </div>                    
+                </div>  
+                <div class="buttons-div m">
+                    <div class="filter-b">
+                        <button type="submit" class="button-17">Filter</button>
+                    </div>
+                    <div class="cancel-all-filters-b">
+                        <button (click)="resetAllFilters()" class="button-17">Reset</button>
+                    </div>
+                </div>              
+            </form>
+        </div>
+    </div>    
+</div>

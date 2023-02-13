@@ -1,1 +1,12 @@
-<p>car-price works!</p>
+<div *ngFor="let price of carPrices" class="price-div">
+    <div class="container">
+        <div class="content">
+            <div class="date">
+                {{price.date}}
+            </div>
+            <div class="price">
+                {{price.price}}
+            </div>
+        </div>
+    </div>
+</div>

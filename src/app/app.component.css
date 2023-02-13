@@ -2,12 +2,3 @@
     margin-top: 100px;
 }
 
-.catalogue {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.car-item {
-    flex: 1 0 30%;
-    margin: 5px;
-}

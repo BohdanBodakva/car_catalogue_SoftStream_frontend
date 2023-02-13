@@ -4,14 +4,18 @@
             <img src="https://www.pngmart.com/files/22/Car-Logo-PNG-Transparent.png">
         </div>
         <div class="title">
-            <p><b>{{title}}</b></p>
+            <p [routerLink]="['']"><b>{{title}}</b></p>
         </div>
-        <div class="search-bar">
-            <form class="search-car-form">
-                <input type="text" class="m-r">
-                <button class="search-button m-r">Search</button>
-                <button class="clear-button m-r">Clear</button>
-            </form>
+        <div class="bar">
+            <div class="create-car">
+                <button class="button-17" [routerLink]="['/create-car']">Create car</button>
+            </div>
+            <div class="create-car">
+                <button class="button-17" [routerLink]="['/brands']">Brands</button>
+            </div>
+            <div class="create-car">
+                <button class="button-17" [routerLink]="['/create-brand']">Create brand</button>
+            </div>
         </div>
     </div>
 </div>

@@ -1,25 +1,35 @@
-<div class="car-item">
-    <div class="container">
-
-        <div class="photo">
-            <img
-                src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?cs=srgb&dl=pexels-mike-b-170811.jpg&fm=jpg">
+<div class="body">
+    <div class="car-item">
+        <div class="container">
+            <div class="photo">
+                <img
+                    src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?cs=srgb&dl=pexels-mike-b-170811.jpg&fm=jpg">
+            </div>
+            <div class="text">
+                <div class="item-header">
+                    <b>{{car.brand.name}} {{car.model}}</b>
+                </div>
+                <div class="item-body">
+                    <p><b>Engine capacity:</b> {{car.engineCapacity}}</p>
+                    <p><b>Color:</b> {{car.color}}</p>
+                    <p><b>Price:</b> {{car.currentPrice}} $</p>
+                    <p><b>Description:</b> {{car.description}}</p>
+                </div>
+                <div class="prices">
+                    <h3><a (click)="renderPrices()">Price history ▼</a></h3>
+                    <div *ngIf="showAllPrices">
+                        <p *ngFor="let price of carPrices">
+                            {{price.date}} : {{price.price}} $
+                        </p>
+                    </div>                    
+                </div>
+                <div class="buttons">
+                    <button class="button-17" (click)="updateCar(car)">Update</button>
+                    <button class="button-17" (click)="deleteCarById(car.id)">Delete</button>
+                    <button class="button-17" [routerLink]="['']">Go back</button>
+                </div>
+            </div>
         </div>
-        <div class="text">
-            <div class="item-header">
-                <b>{{brand}} {{model}}</b>
-            </div>
-            <div class="item-body">
-                <p><b>Engine capacity:</b> {{engineCapacity}}</p>
-                <p><b>Color:</b> {{color}}</p>
-                <p><b>Price:</b> {{currentPrice}} $</p>
-                <p><b>Description:</b> {{description}}</p>
-            </div>
-            <div class="go-back-button">
-                <button class="button-17">Go back</button>
-            </div>
-        </div>
+        <app-car-price-list></app-car-price-list>
     </div>
-
-
 </div>

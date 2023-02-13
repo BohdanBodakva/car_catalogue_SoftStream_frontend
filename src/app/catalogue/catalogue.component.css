@@ -1,0 +1,71 @@
+.body-div {
+    margin-top: 140px;
+}
+
+.container {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.display {
+    display: flex;
+}
+
+.left {
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: 30px;
+    width: 500px;
+}
+
+.left-height-400 {
+    height: 450px;
+}
+
+.left-height-350 {
+    height: 390px;
+}
+
+.right-side {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-2-per-row {
+    width: 500px;
+    box-sizing: border-box;
+    margin: 10px;
+    height: 310px;
+}
+
+.item-3-per-row {
+    width: 300px;
+    box-sizing: border-box;
+    margin: 10px;
+    height: 310px;
+}
+
+.rendered-cars {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.toggle img {
+    width: 28px;
+    margin-left: 150px;
+    margin-top: -3px;
+}
+
+.up {
+    display: flex;
+    justify-content: center;
+}

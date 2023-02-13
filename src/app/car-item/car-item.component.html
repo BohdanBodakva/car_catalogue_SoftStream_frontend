@@ -4,13 +4,13 @@
     </div>
     <div class="text">
         <div class="item-header">
-            <b>{{brand}} {{model}}</b>
+            <b>{{car.brand.name}} {{car.model}}</b>
         </div>
         <div class="item-body">
-            <p>Price: {{currentPrice}} $</p>
+            <p>Price: {{car.currentPrice}} $</p>
         </div>
     </div> 
     <div class="go-to-cat-button">
-        <button class="button-17" [routerLink]="['/cars' + 1]">Go to car</button>
+        <button class="button-17" [routerLink]="['/' + car.id]">More</button>
     </div>   
 </div>

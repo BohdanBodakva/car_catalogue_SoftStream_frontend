@@ -1,16 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+// import { Car } from '../catalogue/catalogue.component';
 
 @Component({
   selector: 'app-car-item',
   templateUrl: './car-item.component.html',
-  styleUrls: ['./car-item.component.css']
+  styleUrls: ['./car-item.component.css'],
 })
 export class CarItemComponent {
 
-  id:number = 1
-  brand:string = "BMW"
-  model:string = "3 Series M Sport"
-  currentPrice:number = 120000
+  @Input() car: any;
 
-
+  
 }
+

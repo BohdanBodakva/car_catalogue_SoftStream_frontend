@@ -1,0 +1,20 @@
+.body-div{
+    margin-top: 140px;
+}
+
+.container{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    width: 340px;
+    /* flex: 1 0 30%; */
+    margin: 10px;
+}

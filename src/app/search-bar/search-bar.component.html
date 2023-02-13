@@ -1,0 +1,11 @@
+<div class="search-div">
+    <div class="container">
+        <div class="search">
+            <label><b>Find by model</b></label>
+            <input type="text" (ngModelChange)="search($event)" [(ngModel)]="inputValue">
+        </div>
+        <div class="buttons">
+            <button class="button-17" (click)="clearInputField()">Clear</button>
+        </div>
+    </div>
+</div>

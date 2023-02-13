@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'car_catalogue_frontend_angular';
-  numb = 10
+  numb = 10  
 }
+
+

@@ -1,1 +1,26 @@
-<p>catalogue works!</p>
+<app-app-header></app-app-header>
+<div class="body-div">
+    <div class="container">
+        <div class="display">
+            <div class="left"
+                [ngClass]="this.renderedCarsService.areRenderingCarsByBrand ? 'left-height-350' : 'left-height-400'">
+                <app-filters></app-filters>
+            </div>
+            <div class="right-side">
+                <div class="right">
+                    <div class="up">
+                        <app-search-bar></app-search-bar>
+                        <div class="toggle">
+                            <img (click)="changeItemsNumberPerRow()"
+                                src="https://assets.stickpng.com/thumbs/588a6507d06f6719692a2d15.png">
+                        </div>
+                    </div>
+                    <div class="rendered-cars">
+                        <app-car-item [ngClass]="areTwoItemsPerRow ? 'item-2-per-row' : 'item-3-per-row'"
+                            *ngFor="let c of this.renderedCarsService.renderedCars" [car]="c"></app-car-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

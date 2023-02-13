@@ -1,33 +1,20 @@
-.create-body {
-    display: flex;
-    justify-content: center;
-    margin-top: 125px;
-}
-
-.container {
-    border: 2px solid black;
-    padding: 22px;
-    border-radius: 10px;
-    background-color: #cfe0fa;
-}
-
-.params {
-    font-size: 20px;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
-    font-weight: 600;
-    font-size: 23px;
-}
-
-label {
+label{
     margin-right: 15px;
 }
 
-input {
+.search-div{
+    display: flex;
+    justify-content: center;
+    margin-left: 130px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+input{
     margin-right: 15px;
     border-radius: 10px;
     height: 25px;
@@ -35,27 +22,8 @@ input {
     width: 200px;
 }
 
-
-
-select {
-    border-radius: 10px;
-    height: 35px;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.m {
-    margin-bottom: 20px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.create-button {
-    margin-right: 20px;
+b{
+    font-size: large;
 }
 
 .button-17 {
@@ -71,16 +39,15 @@ select {
     display: inline-flex;
     fill: currentcolor;
     font-family: "Google Sans", Roboto, Arial, sans-serif;
-    font-size: 19px;
+    font-size: 14px;
     font-weight: 500;
-    height: 45px;
-    width: 60px;
+    height: 30px;
     justify-content: center;
     letter-spacing: .25px;
     line-height: normal;
     max-width: 100%;
     overflow: visible;
-    padding: 2px 40px;
+    padding: 2px 24px;
     position: relative;
     text-align: center;
     text-transform: none;
@@ -91,39 +58,40 @@ select {
     width: auto;
     will-change: transform, opacity;
     z-index: 0;
-}
-
-.button-17:hover {
+  }
+  
+  .button-17:hover {
     background: #F6F9FE;
     color: #174ea6;
-}
-
-.button-17:active {
+  }
+  
+  .button-17:active {
     box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
     outline: none;
-}
-
-.button-17:focus {
+  }
+  
+  .button-17:focus {
     outline: none;
     border: 2px solid #4285f4;
-}
-
-.button-17:not(:disabled) {
+  }
+  
+  .button-17:not(:disabled) {
     box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.button-17:not(:disabled):hover {
+  }
+  
+  .button-17:not(:disabled):hover {
     box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
-}
-
-.button-17:not(:disabled):focus {
+  }
+  
+  .button-17:not(:disabled):focus {
     box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.button-17:not(:disabled):active {
+  }
+  
+  .button-17:not(:disabled):active {
     box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
-}
-
-.button-17:disabled {
+  }
+  
+  .button-17:disabled {
     box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
+  }
+

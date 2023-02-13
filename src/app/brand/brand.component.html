@@ -1,0 +1,17 @@
+<div class="brand-item">
+    <div class="photo">
+        <img src="https://cdn-icons-png.flaticon.com/512/5229/5229534.png">
+    </div>
+    <div class="text">
+        <div class="item-header">
+            <b>{{brand.name}}</b>
+        </div>
+    </div> 
+    <div class="buttons">
+        <button class="button-17" [routerLink]="[brand.id + '/cars']">Cars</button>
+    </div>
+    <div class="buttons">
+        <button (click)="updateBrand(brand)" class="button-17">Update</button>
+        <button (click)="deleteBrandById(brand.id)" class="button-17">Delete</button>
+    </div>   
+</div>
